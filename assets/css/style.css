@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(64, 111, 187);
+    color: white;
+}
+
+button {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: rgb(231, 103, 64);
+}
+
+.quiz-container button {
+    justify-content: center;
+    display: flex block;
+    margin: 10px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(218, 177, 165);
+}
+
