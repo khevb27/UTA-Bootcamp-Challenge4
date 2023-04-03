@@ -71,7 +71,7 @@ THEN I can save my initials and score
 
 ## Links
 
-- Deployment Link:
+- Deployment Link: https://khevb27.github.io/UTA-Bootcamp-Challenge4/ 
 - GitHub Repository Link: https://github.com/khevb27/UTA-Bootcamp-Challenge4 
 
 ----------------------------------------------------------------------
