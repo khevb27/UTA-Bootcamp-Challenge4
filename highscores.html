@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>High Scores</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Code Quiz</h1>
+
+        <div id="returntoquizbtn">
+            <button onclick="goToQuiz()">Return to Quiz</button>
+        </div>
+
+    </header>
+
+
+    <div id="scorescontainer">
+        <p>High Scores</p>
+        <button onclick="clearScores()">Clear Scores</button>
+
+        <ol id="high-scores"></ol>
+
+        <script>
+            const highScoresList = document.getElementById("high-scores");
+            // Get high scores from local storage
+            const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+            // Sort high scores
+            highScores.sort(function (a, b) {
+                return b.score - a.score;
+            });
+            // Display high scores
+            highScores.forEach(function (score) {
+                const li = document.createElement("li");
+                li.textContent = score.initials + " - " + score.score;
+                highScoresList.appendChild(li);
+            });
+            // Clear high scores function
+            function clearScores() {
+                localStorage.removeItem("highScores");
+                highScoresList.innerHTML = "";
+            }
+            // Go back to quiz function
+            function goToQuiz() {
+                window.location.href = "index.html";
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+

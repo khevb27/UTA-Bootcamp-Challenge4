@@ -3,25 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div>
-        <button class="view-score" id="view-score">HIGHSCORES</button>
+    <header>
+        <h1>Code Quiz</h1>
+
+        <div id="timertag">Time:</div>
+        <div id="timer">60</div>
+
+        <div id="high-scoresbtn">
+            <button onclick="location.href='./highscores.html'">High Scores</button>
+            <ol id="score-list"></ol>
+        </div>
+
+    </header>
+
+    <div id="instructions">
+        <p>Your challenge is to answer the following code-related questions before time runs out! </br>Answer
+            incorrectly and 10 seconds will be deducted from your score and time! Good Luck!</p>
     </div>
-    <div id="intro-page">
-        <h1>Coding Quiz Challenge</h1>
-        <p> Your challenge is to answer the following code-related questions before time runs out!
-            Answer incorrectly and 10 seconds will be deducted from your score and time! Good Luck!</p>
-        <button id="start">START QUIZ</button>
+
+    <div class="container">
+
+        <div id="question"></div>
+        <div id="choices"></div>
+        <button id="start-btn">Start Quiz</button>
+        <form id="score-form" class="hidden">
+            <h2>Quiz Complete!</h2>
+            <label for="initials">Enter Initials:</label>
+            <input type="text" id="initials" name="initials" required>
+            <button type="submit">Save Score</button>
+            <button onclick="location.href='index.html'">Return Home</button>
+        </form>
     </div>
-    <h2 id="countdown"></h2>
-    <div class="quiz-container" id="quiz-container"></div>
-    <div id="answer-determination"></div>
+
+
     <script src="./assets/js/script.js"></script>
 </body>
 

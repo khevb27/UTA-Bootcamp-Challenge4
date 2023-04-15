@@ -1,25 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #0c4063;
+  color: white;
+  text-align: center;
+
+  padding: 20px;
+}
+
 body {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(64, 111, 187);
-    color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  background-color: #d1d2d2;
+}
+
+p {
+  font-size: 30px;
+  padding: 30px;
+  margin: 50px;
+  background-color: #d1d2d2;
+  text-align: center;
+}
+
+#question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #e1271d;
+}
+
+#choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
-    padding: 10px;
-    margin: 20px;
-    border-radius: 5px;
-    background-color: rgb(231, 103, 64);
-}
-
-.quiz-container button {
-    justify-content: center;
-    display: flex block;
-    margin: 10px;
-    font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: #1d93e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: rgb(218, 177, 165);
+  background-color: #0c4063;
 }
 
+.hidden {
+  display: none;
+}
+
+#timertag {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: white;
+  color: #e1271d;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#timer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: white;
+  color: #e1271d;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#high-scores {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+#high-scoresbtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#returntoquizbtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+
+#scorescontainer {
+  text-align: center;
+}
+
+li {
+  font-size: 20px;
+  list-style-position: inside;
+}
